@@ -9,7 +9,6 @@ pub fn generate_marching_cubes(
     let mut vertices: Vec<Vertex> = Vec::new();
     let mut indices: Vec<u32> = Vec::new();
 
-    // Iterate through each cell in the grid
     for x in 0..grid_size - 1 {
         for y in 0..grid_size - 1 {
             for z in 0..grid_size - 1 {
@@ -54,10 +53,9 @@ pub fn generate_marching_cubes(
                         let u = vertex_position[0] / 16.0 as f32;
                         let v = vertex_position[2] / 16.0 as f32;
 
-                        // Create the vertex with the calculated texture coordinates
                         let vertex = Vertex {
                             pos: vertex_position,
-                            tex_coords: [u, v], // The calculated UVs
+                            tex_coords: [u, v],
                         };
 
                         let index = vertices.len() as u32;

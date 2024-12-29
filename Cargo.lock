@@ -248,6 +248,7 @@ dependencies = [
  "miniquad",
  "noise",
  "rand",
+ "rayon",
  "serde_json",
 ]
 
